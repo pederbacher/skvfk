@@ -1,0 +1,92 @@
+/* Reset default margin/padding for the page */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('files/bg1.png');
+    background-size: contain;  /* Scale to fit the entire image without cropping */
+    background-position: center center;  /* Center the image */
+/*    background-repeat: no-repeat;*/  /* Prevent image from repeating */
+}
+
+/* Container: Positioned relative so that the absolute positioning of boxes is based on this */
+.container {
+    position: relative; /* Makes the container the reference for absolute positioning */
+    height: 100vh;      /* Full height of the viewport */
+    width: 100%;        /* Full width of the page */
+    padding: 10px;
+}
+
+/* Style for each box (container for the list of links) */
+.link-box {
+    width: 150px;       /* Set a fixed width for each box */
+    padding: 5px;      /* Padding inside each box */
+    background-color: white;  /* Blue background color */
+    color: black;       /* White text color */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    position: absolute;  /* Absolute positioning */
+}
+
+/* Style for the unordered list (ul) */
+.link-box ul {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0;            /* Remove default padding */
+    margin: 0;             /* Remove default margin */
+}
+
+/* Style for each list item (li) */
+.link-box li {
+    margin: 10px 0;       /* Add margin between list items */
+}
+
+/* Style for the links inside the list items */
+.link-box a {
+    color: black;
+    text-decoration: none;  /* Remove underline */
+    font-size: 20px;        /* Set font size */
+    display: block;         /* Make each link a block-level element */
+    padding: 0 0px 0;         /* Padding around the link */
+}
+
+.link-box a:hover {
+    background-color: red;  /* Darker blue on hover */
+    border-radius: 5px;   /* Rounded corners on hover */
+}
+
+/* Position each box individually */
+#box1 {
+    top: 10px;
+    left: 10px;
+}
+
+#box2 {
+    top: 60px;
+    left: 500px; /* Move it further right */
+}
+
+#box3 {
+    top: 200px;  /* Lower position on the page */
+    left: 50px;
+}
+
+#box4 {
+    top: 200px;
+    left: 300px; /* Move it further right */
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 600px) {
+    .link-box {
+        width: 100%;       /* Make each box full width on small screens */
+        padding: 10px;     /* Adjust padding */
+        top: auto;         /* Remove fixed vertical position */
+        left: auto;        /* Remove fixed horizontal position */
+    }
+}
