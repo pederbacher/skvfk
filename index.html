@@ -9,25 +9,30 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background-image: url('files/bg1.png'); /* Path to your image */
+            background-size: contain;  /* Make the background cover the entire page */
+            background-position: center center; /* Center the image */
+            background-attachment: fixed; /* Make background fixed when scrolling */
+	    background-repeat: no-repeat;  /* Prevent image from repeating */
         }
         header {
-            background-color: #333;
+            background-color: rgba(0, 0, 0, 0.5); /* Dark transparent overlay */
             color: white;
             text-align: center;
-            padding: 1em;
+            padding: 2em;
         }
         main {
             padding: 2em;
+            color: #333;
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Welcome to My Website</h1>
-    </header>
-    <main>
-        <p>This is my first GitHub Pages site. Thanks for visiting!</p>
-    </main>
+    <!-- <header> -->
+    <!--     <h1>Welcome to My Website</h1> -->
+    <!-- </header> -->
+    <!-- <main> -->
+    <!--     <p>This is my first GitHub Pages site. Thanks for visiting!</p> -->
+    <!-- </main> -->
 </body>
 </html>
